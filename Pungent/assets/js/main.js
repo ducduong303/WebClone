@@ -4,13 +4,13 @@ var all = {
         this.fixedNav();
         this.clickMenu();
         this.carousel();
-        
+
     },
-    load:function(){
+    load: function () {
         const load = document.querySelector('.load');
-        setTimeout(() =>{
+        setTimeout(() => {
             load.classList.add('load-hidden')
-        },3000)
+        }, 3000)
     },
     fixedNav: function () {
         const header = document.querySelector('.header');
@@ -72,7 +72,7 @@ var all = {
                     1000: {
                         items: 2
                     },
-                    1200:{
+                    1200: {
                         items: 3
                     }
                 }

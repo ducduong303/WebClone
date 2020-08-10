@@ -166,6 +166,7 @@ var all = {
         const boxItem = document.querySelector('.portfolio__box').children;
         const lightboxContainer = document.querySelector('.portfolio__lightbox');
         const lightboxImg = document.querySelector('.lightbox-image');
+      
         const counter = document.querySelector('.portfolio__lightbox-counter');
         const prev = document.querySelector('.portfolio__lightbox-prev');
         const next = document.querySelector('.portfolio__lightbox-next');
@@ -173,11 +174,15 @@ var all = {
         const arowRight = document.querySelector('.arowRight')
         let index;
         let imgSrc;
+      
+        
 
         // Toggle LightBox
         for (let i = 0; i < boxItem.length; i++) {
             boxItem[i].querySelector('.portfolio__icon').addEventListener('click', () => {
                 index = i;
+              
+                
                 changeImg()
                 lightbox();
             })
@@ -186,7 +191,7 @@ var all = {
             lightboxContainer.classList.toggle('open')
         }
         function changeImg() {
-            imgSrc = boxItem[index].querySelector("img").getAttribute('src');
+            imgSrc = boxItem[index].querySelector("img").getAttribute('src');        
             lightboxImg.src = imgSrc;
             counter.innerHTML = (index + 1) + " of " + boxItem.length;
 
